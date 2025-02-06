@@ -1,0 +1,50 @@
+/* Général */
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Conteneur principal bien centré */
+.container {
+    max-width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Centrer et élargir les tableaux */
+.table-container {
+    display: flex;
+    justify-content: center; /* Centre les tableaux */
+    width: 100%;
+}
+
+/* Ajustement des tables pour qu'elles remplissent la page */
+table {
+    width: 95%;  /* Augmenter la largeur pour qu'elle remplisse l'écran */
+    max-width: 1400px;  /* Limite la largeur maximale pour ne pas exploser */
+    border-collapse: collapse;
+    font-size: 22px;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin: auto; /* Assurer un centrage parfait */
+}
+
+/* Style des titres de colonnes */
+table th {
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    padding: 15px;
+}
+
+/* Style des cellules */
+table td {
+    text-align: center;
+    padding: 15px;
+    border: 2px solid #ddd;
+}
