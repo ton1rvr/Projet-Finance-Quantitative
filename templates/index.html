@@ -13,11 +13,25 @@
         <p class="lead">Cliquez sur un bouton pour exécuter une action</p>
         <div class="d-grid gap-3 col-6 mx-auto">
             <a href="/fetch-data/run" class="btn btn-primary">📊 Récupérer les Données</a>
-            <a href="/garch/run" class="btn btn-secondary">📈 Prédire Volatilité (GARCH)</a>
+            <button onclick="predictGARCH()" class="btn btn-secondary">📈 Prédire Volatilité (GARCH)</button>
             <a href="/lstm-garch-cvi/run" class="btn btn-success">🤖 Prédire Volatilité (LSTM-GARCH-CVI)</a>
             <a href="/sharpe/run" class="btn btn-warning">📌 Optimisation Portefeuille (Sharpe)</a>
             <a href="/sharpe-cvar/run" class="btn btn-danger">⚠️ Optimisation Portefeuille (CVaR)</a>
         </div>
     </div>
+
+    <script>
+        function predictGARCH() {
+            fetch("/garch/run")
+                .then(response => {
+                    if (response.ok) {
+                        window.location.href = "/garch/run"; // Redirige vers la page des résultats GARCH
+                    } else {
+                        alert("Erreur lors de l'exécution du modèle GARCH !");
+                    }
+                })
+                .catch(error => console.error("Erreur:", error));
+        }
+    </script>
 </body>
 </html>

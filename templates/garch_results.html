@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résultats GARCH</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>📊 Résultats GARCH</h1>
+    <h2>Comparaison des Volatilités</h2>
+    
+    <!-- Image du graphe -->
+    <img src="/static/garch_plot.png" alt="Graphique GARCH" style="width:80%; display: block; margin: auto;">
+    
+    <h2>📈 Performances des Modèles</h2>
+    <div>{{ metrics_html | safe }}</div>
+
+    <br>
+    <a href="/" class="btn">Retour au Dashboard</a>
+</body>
+</html>
